@@ -132,10 +132,26 @@ html {
 
 body {
   display: grid;
-  grid-template-areas: "header header header" "main main main" "main main main" "main main main" "main main main" "main main main" "footer footer footer"; }
+  grid-template-areas: "header header header" "main main main" "main main main" "main main main" "main main main" "main main main" "footer footer footer";
+  margin: 1%; }
 
 .navbar {
-  grid-area: header; }
+  grid-area: header;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  width: 90%; }
+  .navbar ul {
+    display: flex;
+    justify-content: space-evenly;
+    grid-column: 9/11; }
+  .navbar .navbar_Xe {
+    grid-column: 11/12;
+    width: 2rem; }
+  .navbar .navbar_profil {
+    width: 3rem;
+    border-radius: 50%;
+    grid-column: 12/13; }
 
 .main {
   grid-area: main; }
