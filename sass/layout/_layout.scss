@@ -3,5 +3,24 @@ html {
 }
 
 body {
-    grid-template-areas: "";
+    grid-template-areas: "header header header"
+                    "main main main"
+                    "main main main"
+                    "main main main"
+                    "main main main"
+                    "main main main"
+                    "footer footer footer";
+
 }
+
+.navbar {
+    grid-area: header;
+}
+.main {
+    grid-area: main;
+}
+.footer {
+    grid-area: footer;
+}
+
+
