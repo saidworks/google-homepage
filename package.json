@@ -4,11 +4,7 @@
     "description": "An attempt to create the google home page in HTML/CSS",
     "main": "index.js",
     "scripts": {
-<<<<<<< HEAD
         "compiler:sass": "node-sass sass/main/main.scss style/main.css -w",
-=======
-        "compiler:sass": "node-sass ./sass/main/main.scss ./style/main.css -w",
->>>>>>> e4b54d2378b9206f3be1cf1039209f681beed308
         "start": "concurrently \"npm run compiler:sass\" \"live-server\""
     },
     "repository": {

@@ -128,33 +128,43 @@ table {
   border-spacing: 0; }
 
 html {
+  font-family: 'Open Sans'; }
+
+html {
   font-size: 10/16rem; }
 
 body {
   display: grid;
   grid-template-areas: "header header header" "main main main" "main main main" "main main main" "main main main" "main main main" "footer footer footer";
-  margin: 1%; }
+  margin-top: 1%; }
 
 .navbar {
   grid-area: header;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(20, 1fr);
   align-items: center;
-  width: 90%; }
+  width: 100%; }
   .navbar ul {
     display: flex;
     justify-content: space-evenly;
-    grid-column: 9/11; }
+    align-items: center;
+    grid-column: 17/20; }
   .navbar .navbar_Xe {
-    grid-column: 11/12;
     width: 2rem; }
   .navbar .navbar_profil {
-    width: 3rem;
+    width: 2rem;
     border-radius: 50%;
-    grid-column: 12/13; }
+    grid-column: 20/21; }
 
 .main {
-  grid-area: main; }
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, 1fr); }
+  .main .main_logo {
+    grid-column: 5/8;
+    grid-row: 1/2;
+    width: 20rem; }
 
 .footer {
   grid-area: footer; }
