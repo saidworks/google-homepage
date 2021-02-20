@@ -40,6 +40,31 @@ body {
         grid-row: 1/2;
         width: 20rem;
     }
+    .main_searchbox {
+        grid-column: 4/10;
+        grid-row: 2/3;
+        display :flex;
+        border : 0.05rem gray solid; 
+        justify-content: flex-start; 
+        align-items: center;   
+        height: auto; 
+        height: 3rem;
+        width :70%; 
+        padding: 1%; 
+        border-radius: 1rem;
+        input[type="text"]{
+            width: 40rem;
+            height: 1rem;
+            border: none;
+            
+        }
+        .main_searchbox_loop {
+            svg {
+                width: 70%;
+            }
+            
+    }
+    }
 }
 
 .footer {
