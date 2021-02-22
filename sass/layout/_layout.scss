@@ -6,7 +6,6 @@ body {
     display: grid;
     grid-template-areas: "header header header" "main main main" "main main main" "main main main" "main main main" "main main main" "footer footer footer";
     margin-top: 1%;
-    height: 100%;
 }
 
 .navbar {
@@ -25,7 +24,7 @@ body {
         width: 2rem;
     }
     .navbar_profil {
-        width: 2rem;
+        width: 3rem;
         border-radius: 50%;
         grid-column: 20/21;
     }
@@ -37,36 +36,92 @@ body {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
     .main_logo {
-        grid-column: 5/8;
-        grid-row: 3/6;
+        grid-column: 6/9;
+        grid-row: 2/6;
         width: 20rem;
     }
     .main_searchbox {
-        grid-column: 4/10;
-        grid-row: 6/9;
-        display :flex;
-        border : 0.05rem gray solid; 
-        justify-content: flex-start; 
-        align-items: center;   
-        height: auto; 
-        height: 1rem;
-        width :70%; 
-        padding: 3%; 
+        grid-column: 5/11;
+        grid-row: 6/8;
+        display: flex;
+        border: 0.05rem #f2f2f2 solid;
+        justify-content: flex-start;
+        align-items: center;
+        height: auto;
+        height: 3.5rem;
+        width: 70%;
         border-radius: 3rem;
-        input[type="text"]{
-            width: 40rem;
-            height: 2rem;
+        input[type="text"] {
+            width: 50rem;
             border: none;
-            
+            height: 3rem;
+            -webkit-tap-highlight-color: transparent;
+        }
+        input[type="text"]:hover {
+            text-decoration: none;
+        }
+        input[type="text"]:focus {
+            border: none;
         }
         .main_searchbox_loop {
+            margin: 2% 0%;
+            padding: 1%;
             svg {
-                margin-left: 3%;
-                width: 100%;
-            }        
+                width: 2rem;
+            }
         }
-      }
+        .main_searchbox_micro {
+            margin: 2%;
+            padding: 1%;
+            svg {
+                width: 1.5rem;
+            }
+        }
     }
+    .main_buttons {
+        grid-column: 5/9;
+        grid-row: 8/9;
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 2%;
+        input[type="button"] {
+            padding: 2%;
+            border: none;
+            background-color: #f2f2f2;
+            border-radius: 2%;
+        }
+    }
+    .main_language {
+        grid-column: 6/10;
+        grid-row: 10/11;
+        letter-spacing: 0.05rem;
+        a:link {
+            padding: 1%;
+            text-decoration: none;
+        }
+    }
+}
+
 .footer {
     grid-area: footer;
+    height: auto;
+    margin-top: 3%;
+    .footer_country {
+        padding: 1% 2%;
+        background-color: #f2f2f2;
+    }
+    .footer_line {
+        border-bottom: 0.1rem #DADCE0 solid;
+        box-shadow: 0.05rem 0.05em #DADCE0;
+    }
+    .footer_navbar {
+        padding: 1% 2%;
+        background-color: #f2f2f2;
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 50%;
+        }
+    }
 }
