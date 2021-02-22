@@ -222,8 +222,9 @@ body {
 
 .footer {
   grid-area: footer;
-  height: auto;
-  margin-top: 3%; }
+  position: absolute;
+  bottom: 0px;
+  width: 100%; }
   .footer .footer_country {
     padding: 1% 2%;
     background-color: #f2f2f2; }
