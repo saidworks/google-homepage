@@ -161,6 +161,8 @@ body {
     width: 3rem;
     border-radius: 50%;
     grid-column: 20/21; }
+  .navbar a:link {
+    text-decoration: none; }
 
 .main {
   grid-area: main;
@@ -238,4 +240,12 @@ body {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      width: 50%; }
+      width: 40%; }
+    .footer .footer_navbar .footer_navbar_right {
+      display: flex;
+      float: right;
+      justify-content: space-between;
+      width: 20%;
+      margin-top: -1rem; }
+    .footer .footer_navbar a:link {
+      text-decoration: none; }
