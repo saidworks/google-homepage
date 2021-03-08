@@ -14,22 +14,21 @@ body {
     grid-template-columns: repeat(20, 1fr);
     align-items: center;
     width: 100%;
-    @media (max-width:77rem) {
+    @media (max-width: 77rem) {
         max-width: 100vw;
-      display:flex;
-      justify-content: flex-end;
-      justify-items: center;
-      ul li {
-          align-self: center;
-          padding: 1vw;
-      }
+        display: flex;
+        justify-content: flex-end;
+        justify-items: center;
+        ul li {
+            align-self: center;
+            padding: 1vw;
+        }
     }
     ul {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         grid-column: 17/20;
-       
     }
     .navbar_Xe {
         width: 2rem;
@@ -49,24 +48,28 @@ body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
-    @media (max-width:77rem) {
-        .main_logo{
-           display: block;
-           margin-left: -5vw;
+    max-width: 100%;
+    @media (max-width: 77rem) {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        .main_logo {
+            grid-column: 2/5 !important;
+            width: 60vw !important;
         }
-        .main_searchbox{
+        .main_searchbox {
+            grid-column: 2/6 !important;
             width: 100vh;
-
-            padding: 0 2vw;
+            padding: 0 4vw;
+            margin-right: 2vw;
             text-align: center;
             input[type="text"] {
                 width: 100vh;
             }
         }
         .main_buttons {
+            grid-column: 2/6 !important;
             display: flex;
             justify-content: space-evenly;
-            
             margin-bottom: 2%;
             input[type="button"] {
                 padding: 3vw 4vw;
@@ -76,7 +79,14 @@ body {
                 margin: 2vw;
             }
         }
-        
+        .main_language {
+            grid-column: 3/5 !important;
+            letter-spacing: 0.05rem;
+            a:link {
+                padding: 1%;
+                text-decoration: none;
+            }
+        }
     }
     .main_logo {
         grid-column: 6/9;
@@ -176,6 +186,45 @@ body {
         }
         a:link {
             text-decoration: none;
+        }
+    }
+    @media (max-width: 40rem) {
+        grid-area: footer;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        .footer_country {
+            padding: 2vw 4vw;
+            background-color: #f2f2f2;
+            font-size: 2Vmin;
+        }
+        .footer_line {
+            border-bottom: 0.1rem #DADCE0 solid;
+            box-shadow: 0.05rem 0.05em #DADCE0;
+        }
+        .footer_navbar {
+            padding: 1% 2%;
+            background-color: #f2f2f2;
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 50%;
+                font-size: 2vmin;
+                padding: 2vw !important;
+                margin-bottom: -1vh;
+            }
+            .footer_navbar_right {
+                display: flex;
+                float: right;
+                justify-content: space-evenly;
+                width: 30vw;
+                align-items: center;
+            }
+            a:link {
+                text-decoration: none;
+            }
         }
     }
 }

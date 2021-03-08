@@ -177,27 +177,40 @@ body {
   grid-area: main;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr); }
+  grid-template-rows: repeat(12, 1fr);
+  max-width: 100%; }
   @media (max-width: 77rem) {
-    .main .main_logo {
-      display: block;
-      margin-left: -5vw; }
-    .main .main_searchbox {
-      width: 100vh;
-      padding: 0 2vw;
-      text-align: center; }
-      .main .main_searchbox input[type="text"] {
-        width: 100vh; }
-    .main .main_buttons {
-      display: flex;
-      justify-content: space-evenly;
-      margin-bottom: 2%; }
-      .main .main_buttons input[type="button"] {
-        padding: 3vw 4vw;
-        border: none;
-        background-color: #f2f2f2;
-        border-radius: 2%;
-        margin: 2vw; } }
+    .main {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr); }
+      .main .main_logo {
+        grid-column: 2/5 !important;
+        width: 60vw !important; }
+      .main .main_searchbox {
+        grid-column: 2/6 !important;
+        width: 100vh;
+        padding: 0 4vw;
+        margin-right: 2vw;
+        text-align: center; }
+        .main .main_searchbox input[type="text"] {
+          width: 100vh; }
+      .main .main_buttons {
+        grid-column: 2/6 !important;
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 2%; }
+        .main .main_buttons input[type="button"] {
+          padding: 3vw 4vw;
+          border: none;
+          background-color: #f2f2f2;
+          border-radius: 2%;
+          margin: 2vw; }
+      .main .main_language {
+        grid-column: 3/5 !important;
+        letter-spacing: 0.05rem; }
+        .main .main_language a:link {
+          padding: 1%;
+          text-decoration: none; } }
   .main .main_logo {
     grid-column: 6/9;
     grid-row: 2/6;
@@ -278,3 +291,36 @@ body {
       margin-top: -1rem; }
     .footer .footer_navbar a:link {
       text-decoration: none; }
+  @media (max-width: 40rem) {
+    .footer {
+      grid-area: footer;
+      position: absolute;
+      bottom: 0px;
+      width: 100%; }
+      .footer .footer_country {
+        padding: 2vw 4vw;
+        background-color: #f2f2f2;
+        font-size: 2Vmin; }
+      .footer .footer_line {
+        border-bottom: 0.1rem #DADCE0 solid;
+        box-shadow: 0.05rem 0.05em #DADCE0; }
+      .footer .footer_navbar {
+        padding: 1% 2%;
+        background-color: #f2f2f2; }
+        .footer .footer_navbar ul {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          width: 50%;
+          font-size: 2vmin;
+          padding: 2vw !important;
+          margin-bottom: -1vh; }
+        .footer .footer_navbar .footer_navbar_right {
+          display: flex;
+          float: right;
+          justify-content: space-evenly;
+          width: 30vw;
+          align-items: center; }
+        .footer .footer_navbar a:link {
+          text-decoration: none; } }
