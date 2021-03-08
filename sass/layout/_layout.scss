@@ -101,7 +101,8 @@ body {
         justify-content: flex-start;
         align-items: center;
         height: auto;
-        height: 53%;
+        font-size: 4rem;
+        height: 43%;
         width: 70%;
         border-radius: 3rem;
         input[type="text"] {
@@ -115,6 +116,7 @@ body {
         }
         input[type="text"]:focus {
             border: none;
+            outline: none;
         }
         .main_searchbox_loop {
             margin: 2% 0%;
